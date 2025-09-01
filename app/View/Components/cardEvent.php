@@ -1,0 +1,30 @@
+<?php
+
+namespace App\View\Components;
+
+use Closure;
+use Illuminate\Contracts\View\View;
+use Illuminate\View\Component;
+
+class cardEvent extends Component
+{
+    /**
+     * Create a new component instance.
+     */
+    public $event;
+    public $user;
+    public function __construct($event,$user)
+    {
+        $this->event = $event;
+        $this->user = $user;
+    }
+
+
+    /**
+     * Get the view / contents that represent the component.
+     */
+    public function render(): View|Closure|string
+    {
+        return view('components.card-event');
+    }
+}

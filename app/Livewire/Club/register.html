@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - HydroDive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif; /* Menggunakan font Inter jika tersedia, atau fallback ke sans-serif */
+      }
+      .bg-dark-pattern {
+        background-color: #1a202c; /* Hampir hitam, sesuai dengan background di image_822b6c.jpg */
+        background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png'); /* Pola tekstur halus */
+        background-blend-mode: overlay; /* Memadukan pola dengan warna gelap */
+      }
+      .card-light-bg {
+        background-color: rgba(255, 255, 255, 0.9); /* Putih semi-transparan, mirip blok konten putih di image_822b6c.jpg */
+        backdrop-filter: blur(10px); /* Efek blur untuk kedalaman */
+      }
+      .green-accent-text {
+        color: #10b981; /* Warna hijau seperti di hero section image_822b6c.jpg */
+      }
+      .green-button {
+        background-color: #10b981; /* Hijau solid */
+      }
+      .green-button:hover {
+        background-color: #059669; /* Hijau lebih gelap saat hover */
+      }
+      .input-style {
+        background-color: #edf2f7; /* Abu-abu sangat terang */
+        border: 1px solid #cbd5e0; /* Border abu-abu */
+        color: #2d3748; /* Teks abu-abu gelap */
+      }
+      .input-style:focus {
+        border-color: #10b981; /* Border hijau saat fokus */
+        box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5); /* Shadow hijau */
+      }
+    </style>
+  </head>
+  <body class="bg-dark-pattern flex items-center justify-center min-h-screen p-4">
+    <div class="card-light-bg rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row w-full max-w-6xl">
+      <div class="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+        <div class="mb-8">
+          <div class="logo text-2xl font-bold text-gray-900 flex items-center mb-6">
+            <span class="green-accent-text mr-2 text-3xl leading-none">•</span>
+            HydroDive
+          </div>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            Holla, <br />Welcome Back
+          </h1>
+          <p class="text-gray-600 text-lg">
+            Hey, welcome back to your special place
+          </p>
+        </div>
+
+        <form action="#" method="POST" class="space-y-6">
+          <div>
+            <label for="email" class="sr-only">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="input-style w-full px-5 py-3 rounded-xl placeholder-gray-500 text-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              placeholder="stanley@gmail.com"
+            />
+          </div>
+
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="input-style w-full px-5 py-3 rounded-xl placeholder-gray-500 text-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              placeholder="••••••••"
+            />
+          </div>
+
+          <div class="flex items-center justify-between text-gray-700 text-sm">
+            <div class="flex items-center">
+              <input
+                id="remember_me"
+                name="remember_me"
+                type="checkbox"
+                class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+              />
+              <label for="remember_me" class="ml-2 block">Remember me</label>
+            </div>
+            <div class="text-sm">
+              <a href="#" class="font-medium green-accent-text hover:underline">Forgot Password?</a>
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="w-full green-button text-white py-3 px-4 rounded-xl font-semibold text-lg hover:shadow-xl transition duration-300"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+
+        <div class="mt-8 text-center text-gray-600 text-sm">
+          <p>Don't have an account? <a href="#" class="font-semibold green-accent-text hover:underline">Sign Up</a></p>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 hidden lg:flex items-center justify-center p-8 md:p-12 relative overflow-hidden rounded-r-3xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-indigo-800 opacity-80 z-0"></div>
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/fingerprint-scanner-5982236-4965215.png" alt="Fingerprint Security Illustration" class="relative z-10 w-full max-w-sm h-auto opacity-90" />
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white z-20">
+          <svg class="w-20 h-20 text-white mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+          </svg>
+          <h2 class="text-white text-3xl font-bold">Secure Access</h2>
+          <p class="text-gray-200">Your data is protected with us.</p>
+        </div>
+        <div class="absolute w-64 h-64 bg-white rounded-full opacity-10 blur-xl top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
+        <div class="absolute w-80 h-80 bg-white rounded-full opacity-10 blur-xl bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 z-0"></div>
+      </div>
+    </div>
+  </body>
+</html>
